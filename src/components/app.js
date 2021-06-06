@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
 
-import Header from './header';
 import Navbar from './navbar';
 import Home from './home';
 import Mini from './shop/miniShop';
@@ -10,13 +14,15 @@ import Contact from './contact';
 export default class App extends Component {
   render() {
     return (
-      <div className='app'>
-        <Header />
-        <Navbar />
-        <Home />
-        <Mini />
-        <Events />
-        <Contact />
+      <div className='container'>
+        <Router>
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path="/shop" component={Mini} />
+            <Route path="/events" component={Events} />
+            <Route path="/contact-us" component={Contact} />
+          </Switch>
+        </Router>
       </div>
     );
   }
