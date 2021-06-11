@@ -9,7 +9,22 @@ export default class Contact extends Component {
                 <div>
                     <Navbar />
                 </div>
-                <h3>CONTACT US!</h3>
+                <form>
+                    <div className="two-columns">
+                        <input
+                        type="text"
+                        name="name"
+                        placeholder="Full Name"
+                        value={null}
+                        />
+                        <input
+                        type="text"
+                        name="company"
+                        placeholder="Company Name"
+                        value={null}
+                        />
+                    </div>
+                </form>
             </div>
         )
     }
