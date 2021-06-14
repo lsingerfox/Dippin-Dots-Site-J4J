@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Navbar from '../navbar';
+import Navbar from '../header-nav/navbar';
 
 export default class Mini extends Component {
     render() {

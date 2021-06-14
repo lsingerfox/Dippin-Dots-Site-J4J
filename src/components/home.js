@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import Header from './header';
-import Navbar from './navbar';
+import Header from './header-nav/header';
+import Navbar from './header-nav/navbar';
 
 export default class Home extends Component {
     render() {

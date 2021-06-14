@@ -5,7 +5,7 @@ import {
   Route
 } from 'react-router-dom';
 
-import Navbar from './navbar';
+import Navbar from './header-nav/navbar';
 import Home from './home';
 import Mini from './shop/miniShop';
 import Events from './events';
