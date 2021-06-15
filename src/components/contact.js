@@ -23,7 +23,32 @@ export default class Contact extends Component {
                         placeholder="Company Name"
                         value={null}
                         />
+                        <input
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        value={null}
+                        />
+                        <input
+                        type="phone"
+                        name="phone"
+                        placeholder="Phone Number"
+                        value={null}
+                        />
                     </div>
+                    <div className="one-column">
+                        <input
+                        type="text"
+                        name="message"
+                        placeholder="How may we help you?"
+                        value={null}
+                        />
+                        
+                        <button className="btn">
+                            Send Message
+                        </button>
+                    </div>
+                    
                 </form>
             </div>
         )

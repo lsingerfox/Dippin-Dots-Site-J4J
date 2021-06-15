@@ -27,4 +27,7 @@ body {
     justify-items: center;
 }
 
+@import "./variables.scss";
+@import "./navbar.scss";
 @import "./header.scss";
+@import "./contact.scss";

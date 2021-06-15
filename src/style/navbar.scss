@@ -1,0 +1,27 @@
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+
+    .right-nav {
+
+        img {
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+            
+            &:hover {
+                   filter: brightness(90%)
+            }
+        }
+
+    }
+
+    .center-nav {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        .nav-link-wrapper {
+            justify-content: space-around;
+        }
+    }
+}
