@@ -2,15 +2,17 @@
     display: flex;
     justify-content: space-between;
     padding: 30px;
+    background-color: $dipdotblue;
 
     .right-nav {
 
         img {
-            cursor: pointer;
-            transition: 0.5s ease-in-out;
+            width: 100px;
+            height: 100px;
             
             &:hover {
-                   filter: brightness(90%)
+                transition: 0.5s ease-in-out;
+                filter: brightness(90%)
             }
         }
 
@@ -19,9 +21,30 @@
     .center-nav {
         display: flex;
         align-items: center;
-        font-size: 16px;
+
         .nav-link-wrapper {
-            justify-content: space-around;
+            a {
+                margin-left: 50px;
+                text-decoration: none;
+                color: white;
+                font-size: 23px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .left-nav {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+
+        .nav-link-wrapper {
+            a {
+                text-decoration: none;
+                color: lightgrey;
+                font-size: 23px;
+                font-weight: 300;
+            }
         }
     }
 }
