@@ -37,8 +37,8 @@ export default class Contact extends Component {
                         />
                     </div>
                     <div className="one-column">
-                        <input
-                        type="text"
+                        <textarea
+                        rows="10"
                         name="message"
                         placeholder="How may we help you?"
                         value={null}
