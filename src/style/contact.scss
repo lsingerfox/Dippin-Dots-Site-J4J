@@ -9,6 +9,7 @@
         height: 40px;
         font-size: 2em;
         font-weight: 400;
+        border: solid 2px black;
         border-radius: 10px;
         padding-left: 7px;
     }
@@ -23,9 +24,10 @@
         height: 200px;
         font-size: 2em;
         font-weight: 400;
-        
+        border: solid 2px black;
         border-radius: 10px;
         padding-left: 7px;
+        padding-top: 7px;
     }
 
     .btn {
@@ -35,8 +37,10 @@
         width: 150px;
         font-size: 1.5em;
         color: white;
+        border: solid 1px transparent;
         border-radius: 10px;
         background-image: linear-gradient(to right, $j4j-pink, $dipdotblue);
+        box-shadow: 4px 3px 4px 0px rgba(118,117,117,0.50);
     }
 }
 
