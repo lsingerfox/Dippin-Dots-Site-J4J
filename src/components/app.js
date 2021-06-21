@@ -10,7 +10,7 @@ import Home from './home';
 import Mini from './shop/miniShop';
 import Events from './events';
 import Contact from './contact';
-import About from './about';
+import About from './aboutComponents/about';
 
 export default class App extends Component {
   render() {

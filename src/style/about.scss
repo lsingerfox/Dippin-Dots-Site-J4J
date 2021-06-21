@@ -1,0 +1,15 @@
+.about-wrapper {
+    img {
+        height: 500px;
+        display: flex;
+        padding: 10px 30px 5px 30px;
+    }
+
+    _center {
+        display: grid;
+        grid-template-rows: [paragraph-s] 1fr [paragragh-e image-s] 1fr [image-e];
+        img {
+            grid-row: image-s/image-e;
+        }
+    }
+}
