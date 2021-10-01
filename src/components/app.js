@@ -7,8 +7,8 @@ import {
 
 import Navbar from './header-nav/navbar';
 import Home from './home';
-import Mini from './shop/miniShop';
-import Events from './events';
+import Mini from './shop/shop';
+import Events from './events/events';
 import Contact from './contact';
 import About from './aboutComponents/about';
 

@@ -1,0 +1,25 @@
+.shop-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-content: center;
+
+    .shop-product{
+        justify-items: center;
+        align-content: center;
+    
+        img{
+            height: 275px;
+        }
+    
+    }
+
+    .shop-product_title{
+        font-size: 25px;
+    }
+
+    .shop-product_price{
+        font-size: 15px;
+    }
+}
