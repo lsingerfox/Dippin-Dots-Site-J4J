@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
 import Navbar from '../header-nav/navbar';
-import BananaSplit from '../../../static/images/products/BananaSplit.jpg';
-import BirthdayCake from '../../../static/images/products/BirthdayCake.jpg';
-import Chocolate from '../../../static/images/products/Chocolate.jpg';
-import CookieDough from '../../../static/images/products/CookieDough.jpg';
-import CookiesNCream from '../../../static/images/products/CookiesNCream.jpg';
-import CottonCandy from '../../../static/images/products/CottonCandy.jpg';
-import RainbowIce from '../../../static/images/products/RainbowIce.jpg';
-import UltimateBrownieBatter from '../../../static/images/products/UltimateBrownieBatter.jpg';
-import Vanilla from '../../../static/images/products/Vanilla.jpg';
+import BananaSplit from '../../../static/images/products/Banana-Split.png';
+import BirthdayCake from '../../../static/images/products/Birthday-Cake.png';
+import Chocolate from '../../../static/images/products/Chocolate.png';
+import CookieDough from '../../../static/images/products/Cookie-Dough.png';
+import CookiesNCream from '../../../static/images/products/Cookies-n-Cream.png';
+import CottonCandy from '../../../static/images/products/Cotton-Candy.png';
+import RainbowIce from '../../../static/images/products/Rainbow-Ice.png';
+import UltimateBrownieBatter from '../../../static/images/products/Ultimate-Brownie-Batter.png';
+import Vanilla from '../../../static/images/products/Vanilla.png';
 
 export default class Mini extends Component {
     render() {
