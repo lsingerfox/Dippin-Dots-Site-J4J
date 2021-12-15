@@ -8,7 +8,7 @@ import CookieDough from '../../../static/images/products/Cookie-Dough.png';
 import CookiesNCream from '../../../static/images/products/Cookies-n-Cream.png';
 import CottonCandy from '../../../static/images/products/Cotton-Candy.png';
 import RainbowIce from '../../../static/images/products/Rainbow-Ice.png';
-import UltimateBrownieBatter from '../../../static/images/products/Ultimate-Brownie-Batter.png';
+import UltimateBrownieBatter from '../../../static/images/products/Ultimate-Brownie-Batter.jpg';
 import Vanilla from '../../../static/images/products/Vanilla.png';
 
 export default class Mini extends Component {
