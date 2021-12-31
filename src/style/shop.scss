@@ -1,9 +1,10 @@
-.shop-wrapper {
+.shop-products {
     display: grid;
+    grid-template-rows: 1/-1;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+
     justify-items: center;
-    align-content: center;
+
 
     .shop-product{
         justify-items: center;
@@ -11,15 +12,20 @@
     
         img{
             height: 275px;
+            width: 275px;
+            margin-top: 20px;
         }
     
     }
 
     .shop-product_title{
+        text-align: center;
         font-size: 25px;
     }
 
     .shop-product_price{
+        text-align: center;
         font-size: 15px;
+        margin-bottom: 15px;
     }
 }

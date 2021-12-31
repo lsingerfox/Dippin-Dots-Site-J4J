@@ -11,6 +11,7 @@ import Mini from './shop/shop';
 import Events from './events/events';
 import Contact from './contact';
 import About from './aboutComponents/about';
+import ShopProduct from './shop/shop';
 
 export default class App extends Component {
   render() {
@@ -19,7 +20,7 @@ export default class App extends Component {
         <Router>
           <Switch>
             <Route exact path='/' component={Home} />
-            <Route path="/shop" component={Mini} />
+            <Route path="/shop" component={ShopProduct} />
             <Route path="/events" component={Events} />
             <Route path="/contact-us" component={Contact} />
             <Route path="/about-us" component={About} />
