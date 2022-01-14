@@ -6,9 +6,6 @@ export default class Contact extends Component {
     render() {
         return (
             <div>
-                <div>
-                    <Navbar />
-                </div>
                 <form>
                     <div className="two-columns">
                         <input

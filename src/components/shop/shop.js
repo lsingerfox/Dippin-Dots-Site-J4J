@@ -15,7 +15,6 @@ export default class ShopProduct extends Component {
     render() {
         return (
             <div>
-                <Navbar />
                 <div className='shop-products'>
                     <div className='shop-product'>
                         <img className='shop-product_img' src={BS}/>

@@ -9,7 +9,6 @@ export default class About extends Component {
     render() {
         return (
             <div>
-                <Navbar />
                 <div className="about-wrapper">
                     <div className="about-squares">
                         <div className="cover-photo">

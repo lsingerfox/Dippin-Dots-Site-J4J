@@ -3,15 +3,19 @@ import {
     faStore,
     faCalendarAlt,
     faEnvelope,
-    faIdCard
-} from "@fortawesome/free-solid-svg-icon";
+    faLock,
+    faIdCard,
+    faSignOutAlt
+} from "@fortawesome/fontawesome-free-solid";
 
 const Icons = () => {
     return library.add (
         faStore,
         faCalendarAlt,
         faEnvelope,
-        faIdCard
+        faLock,
+        faIdCard,
+        faSignOutAlt
     );
 };
 
