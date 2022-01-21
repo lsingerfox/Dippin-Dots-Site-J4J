@@ -13,7 +13,6 @@ import Events from './events/events';
 import Contact from './contact';
 import About from './aboutComponents/about';
 import ShopProduct from './shop/shop';
-import Login from './auth/login';
 import Auth from "./auth";
 import Dashboard from './auth/dashboard';
 import Icons from "./helpers/icons";

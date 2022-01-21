@@ -29,6 +29,13 @@
                 color: white;
                 font-size: 23px;
                 font-weight: 600;
+
+            }
+            
+            :hover {
+                color: $j4j-pink;
+                font-size: 26px;
+                transition: 0.3s;
             }
         }
     }

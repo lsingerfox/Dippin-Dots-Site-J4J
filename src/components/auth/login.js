@@ -34,12 +34,18 @@ export default class Login extends Component{
           
         }).then(response => {
             if (response.status == 200) {
+                console.log(response.data)
+                sessionStorage.setItem('name',response.data.data.name)
+                sessionStorage.setItem('email',response.data.data.email)
+                sessionStorage.setItem('phone',response.data.data.phone)
                 this.props.handleSuccessfulAuth();
-            } else {
+            } else if (response.status == 401) {
                 this.setState({
                     errorText: "Incorrect email and/or password"
                 });
                 this.props.handleUnsuccessfulAuth();
+            } else {
+                null
             }
         }).catch(error => {
             this.setState({
@@ -56,7 +62,6 @@ export default class Login extends Component{
             <div>
                 <h1>LOGIN</h1>
 
-                <div>{this.state.errorText}</div>
 
                 <form onSubmit={this.handleSubmit} className="auth-form-wrapper">
                     <div className="form-group">
@@ -67,7 +72,7 @@ export default class Login extends Component{
                             placeholder="Your Email"
                             value={this.state.email}
                             onChange={this.handleChange}
-                        />
+                            />
                     </div>
 
                     <div className="form-group">
@@ -78,8 +83,10 @@ export default class Login extends Component{
                             placeholder="Your Password"
                             value={this.state.password}
                             onChange={this.handleChange}
-                        />
+                            />
                     </div>
+                    
+                    <div className="login-error">{this.state.errorText}</div>
 
                     <div>
                         <button className="btn" type="submit">Login</button>

@@ -1,15 +1,28 @@
 import React, { Component } from 'react';
 
 import Header from './header-nav/header';
-import Navbar from './header-nav/navbar';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default class Home extends Component {
     render() {
         return (
             <div>
                 <Header />
-                <h1>Jump 4 Joy Montana Distributing, LLC.</h1>
-                <h2>Dippin' Dots Site GO!</h2>
+                <div className="link-grid">
+                    <Link to exact="/shop" className="link-grid-icon">
+                        <FontAwesomeIcon icon="store" />
+                    </Link>
+                    <Link to exact="/events" className="link-grid-icon">
+                        <FontAwesomeIcon icon="calendar-alt" />
+                    </Link>
+                    <Link to exact="/contact-us" className="link-grid-icon">
+                        <FontAwesomeIcon icon="paper-plane" />
+                    </Link>
+                    <Link to exact="/about-us" className="link-grid-icon">
+                        <FontAwesomeIcon icon="users" />
+                    </Link>
+                </div>
             </div>
         )
     }

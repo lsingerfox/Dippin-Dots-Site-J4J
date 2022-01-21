@@ -5,7 +5,10 @@ import {
     faEnvelope,
     faLock,
     faIdCard,
-    faSignOutAlt
+    faSignOutAlt,
+    faPaperPlane,
+    faUsers,
+    faPortrait
 } from "@fortawesome/fontawesome-free-solid";
 
 const Icons = () => {
@@ -15,7 +18,10 @@ const Icons = () => {
         faEnvelope,
         faLock,
         faIdCard,
-        faSignOutAlt
+        faSignOutAlt,
+        faPaperPlane,
+        faUsers,
+        faPortrait
     );
 };
 

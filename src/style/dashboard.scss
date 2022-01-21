@@ -1,0 +1,36 @@
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: calc(100vh - 84px);
+
+    .left-dashboard {
+
+        .image {
+            
+            svg {
+                margin-top: 50px;
+                height: 500px;
+                width: 100%;
+            }
+        }
+    }
+
+    .right-dashboard {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        font-family: "Forum", sans-serif;
+        font-size: 3em;
+        color: $dipdotblue;
+        padding: 5px 0px;
+        width: 100%;
+        border: 0px;
+        background-color: transparent;
+
+        .name, .email, .phone {
+            margin-top: 40px;
+        }
+    }
+}
