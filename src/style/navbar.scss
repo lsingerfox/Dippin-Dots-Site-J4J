@@ -4,7 +4,7 @@
     padding: 30px;
     background-color: $dipdotblue;
 
-    .right-nav {
+    .left-nav {
 
         img {
             width: 100px;
@@ -37,10 +37,16 @@
                 font-size: 26px;
                 transition: 0.3s;
             }
+
+            .nav-link-active {
+                border-bottom: 1px solid $j4j-fade;
+                padding-bottom: 6px;
+                color: $j4j-pink;
+            }
         }
     }
 
-    .left-nav {
+    .right-nav {
         display: flex;
         justify-content: end;
         align-items: center;

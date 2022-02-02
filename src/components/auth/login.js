@@ -3,8 +3,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import Navbar from "../header-nav/navbar";
-
 export default class Login extends Component{
     constructor(props) {
         super(props);
@@ -27,7 +25,7 @@ export default class Login extends Component{
     }
 
     handleSubmit(event) {
-        axios.post("https://backend-j4jmtdb.herokuapp.com/user/login", {
+        axios.post("https://backend-j4jmtdb.herokuapp.com//user/login", {
            
                 email: this.state.email,
                 password: this.state.password

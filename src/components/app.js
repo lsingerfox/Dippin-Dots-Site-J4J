@@ -77,7 +77,7 @@ export default class App extends Component {
 
   authorizedRoutes () {
     return [
-      <Route key="event-manager" path="/event-manager" component={EventManager} />
+      <Route key="dashboard" path="/dashboard" component={Dashboard} />
     ]
   }
 
