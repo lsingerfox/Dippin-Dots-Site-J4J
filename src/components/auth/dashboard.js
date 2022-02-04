@@ -16,7 +16,7 @@ export default class Dashboard extends Component {
     }
 
     handleLoggedIn() {
-        axios.get("https://backend-j4jmtdb.herokuapp.com/dashboard/", {
+        axios.get("localhost:5000/dashboard/", {
             user: {
                 name: this.state.name,
                 email: this.state.email,

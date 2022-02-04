@@ -18,7 +18,7 @@ const Navbar = props => {
     };
 
     const handleSignOut = () => {
-        axios.delete("https://backend-j4jmtdb.herokuapp.com/logout")
+        axios.delete("localhost:5000/logout"), { withCredentials: true }
         .then(response => {
             if (response.status === 200) {
                 console.log(response.data)
