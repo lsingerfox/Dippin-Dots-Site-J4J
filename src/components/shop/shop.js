@@ -7,18 +7,17 @@ export default class ShopProduct extends Component {
         super(props);
 
         this.state = {
-            products: [],
-            status:false
+            products: [""]
         };
     }
+    
     componentDidMount() {
         axios.get("http://localhost:5000/products"
         ).then (response => {
-          console.log(response.data.data)
-        this.setState({
-            products:response.data.data,
-            status:true
-        })
+            console.log(response.data.data)
+            this.setState({
+                products:response.data.data
+            })
         }).catch(error => {
             console.log("getProducts error", error)
         })
@@ -34,10 +33,17 @@ export default class ShopProduct extends Component {
                 <div className='shop-product_price'>
                     {product.price}
                 </div>
+                <div className='test'>
+                    I am here
+                </div>
             </div>
-        })
+        });
+
         return (
-          <div className='shop-products'>
+            <div className='shop-products'>
+                <div className='test'>
+                    I am here
+                </div>
                 {shop}
             </div>
         )
