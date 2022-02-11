@@ -42,7 +42,7 @@ export default class ShopProduct extends Component {
         return (
             <div className='shop-products'>
                 <div className='test'>
-                    I am here
+                    Testing 1, 2, 3
                 </div>
                 {shop}
             </div>
