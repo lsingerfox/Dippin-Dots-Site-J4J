@@ -8,7 +8,7 @@ import Logo from '../../../static/images/header and logo/Temp-Logo.png';
 
 const Navbar = props => {
     const handleSignOut = () => {
-        axios.delete("https://backend-j4jmtdb.herokuapp.com/logout")
+        axios.post("https://backend-j4jmtdb.herokuapp.com/logout")
         .then(response => {
             if (response.status === 200) {
                 console.log(response.data)
