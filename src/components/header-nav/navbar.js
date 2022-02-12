@@ -7,28 +7,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Logo from '../../../static/images/header and logo/Temp-Logo.png';
 
 const Navbar = props => {
-    const dynamicLink = (route, linkText) => {
-        return (
-            <div className='nav-link-wrapper'>
-                <NavLink to={route} activeClassName='nav-link-active'>
-                    {linkText}
-                </NavLink>
-            </div>
-        );
-    };
-
     const handleSignOut = () => {
-        axios.delete("localhost:5000/logout"), { withCredentials: true }
+        axios.delete("https://backend-j4jmtdb.herokuapp.com/logout")
         .then(response => {
             if (response.status === 200) {
                 console.log(response.data)
                 sessionStorage.clear('name', response.data.data.name)
                 sessionStorage.clear('email', response.data.data.email)
                 sessionStorage.clear('phone', response.data.data.phone)
-                props.history.push("/");
                 props.handleSuccessfulLogout();
+                props.history.push("/");
             }
-            return response.data;
+            return response;
         }).catch(error => {
             console.log("Error signing out", error)
         })
@@ -70,7 +60,7 @@ const Navbar = props => {
                     </div>
                     <div className='nav-link-wrapper'>
                         <NavLink exact to = "/dashboard" activeClassName='nav-link-active'>
-                            { props.loggedInStatus === "LOGGED_IN" ? (dynamicLink("/dashboard", "Dashboard")) : null }
+                            { props.loggedInStatus === "LOGGED_IN" ? "Dashboard" : null }
                         </NavLink>
                     </div>
                 
@@ -79,12 +69,12 @@ const Navbar = props => {
                 <div className="right-nav">
                     <div className="nav-link-wrapper">
                         <NavLink exact to="/login" activeClassName="nav-link-active">
-                            {props.loggedInStatus === "NOT_LOGGED_IN" ? (dynamicLink("/login", "Login")) : null}
+                            {props.loggedInStatus === "NOT_LOGGED_IN" ? "Login" : null}
                         </NavLink>
                         <NavLink exact to="/" activeClassName='nav-link-active'>
-                            {props.loggedInStatus === "LOGGED_IN" ? (dynamicLink ("/", <a onClick={handleSignOut}>
+                            {props.loggedInStatus === "LOGGED_IN" ? <a onClick={handleSignOut}>
                                     <FontAwesomeIcon icon="sign-out-alt" />
-                                </a>)) : null}
+                                </a> : null}
                         </NavLink>
                     </div>
                 </div>

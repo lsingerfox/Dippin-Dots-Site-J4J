@@ -1,14 +1,14 @@
-.shop-products {
-    display: grid;
-    grid-template-rows: 1/-1;
-    grid-template-columns: 1fr 1fr 1fr;
-
-    justify-items: center;
-
-
+.shop-products {    
     .shop-product{
+        display: grid;
+        grid-template-rows: 1/-1;
+        grid-template-columns: 1fr 1fr 1fr;
+    
         justify-items: center;
-        align-content: center;
+        .shop-product_grid {
+            justify-items: center;
+            align-content: center;
+        }
     
         img{
             height: 275px;
@@ -21,6 +21,7 @@
     .shop-product_title{
         text-align: center;
         font-size: 25px;
+        margin-top: 20px;
     }
 
     .shop-product_price{

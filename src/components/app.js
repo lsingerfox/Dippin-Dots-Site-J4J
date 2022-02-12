@@ -49,7 +49,7 @@ export default class App extends Component {
   }
 
   checkLoginStatus() {
-    return axios.get("http://localhost:5000/")
+    return axios.get("https://backend-j4jmtdb.herokuapp.com/")
     .then (response => {
       const loggedIn = response.data.logged_in;
       const loggedInStatus = this.state.loggedInStatus;

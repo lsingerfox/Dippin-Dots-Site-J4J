@@ -7,45 +7,66 @@ export default class ShopProduct extends Component {
         super(props);
 
         this.state = {
-            products: [""]
+            items: [],
+            loading:false,
+            error:false
         };
-    }
-    
+    }    
+
     componentDidMount() {
-        axios.get("http://localhost:5000/products"
-        ).then (response => {
-            console.log(response.data.data)
+        fetch("https://backend-j4jmtdb.herokuapp.com/products")
+        .then(response => response.json())
+        .then(data => {
+            console.log(data.data)
             this.setState({
-                products:response.data.data
+                items: data.data,
+                loading: false
             })
-        }).catch(error => {
-            console.log("getProducts error", error)
+        })
+        .catch(error => {
+            console.log("Error getting items ", error)
+            this.setState({
+                error: true,
+                loading: false
+            })
         })
     }
 
-    render() {
-        const shop = this.state.products.map(product=>{
-            <div className='shop-product'>
-                <img scr = {product.image} className='shop-product_img' />
-                <div className='shop-product_title'>
-                    {product.title}
+    renderItems() {
+        const itemsHtml = this.state.items.map(item => (
+            <div className='shop-product_grid'>
+                <div className="shop-product_title" key={item.id}>
+                    <h3>{item.title}</h3> 
                 </div>
+                <img src={item.image} className="shop-product_img" />
                 <div className='shop-product_price'>
-                    {product.price}
-                </div>
-                <div className='test'>
-                    I am here
+                    ${item.price}.00
                 </div>
             </div>
-        });
+        ))
 
-        return (
-            <div className='shop-products'>
-                <div className='test'>
-                    Testing 1, 2, 3
+        return itemsHtml
+    }
+
+    render() {
+        if (this.state.loading) {
+            return (
+                <div className='shop-products'>
+                    <div className='shop-product'>
+                        <div className="loading">Loading...</div>
+                    </div>
                 </div>
-                {shop}
-            </div>
-        )
+            )
+        }
+
+        else {
+            return (
+                <div className='shop-products'>
+                    <div className="shop-product">
+                        {this.renderItems()}
+                    </div>
+                </div>
+            )
+        }
     }
 }
