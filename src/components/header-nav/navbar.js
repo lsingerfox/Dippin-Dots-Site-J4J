@@ -8,13 +8,12 @@ import Logo from '../../../static/images/header and logo/Temp-Logo.png';
 
 const Navbar = props => {
     const handleSignOut = () => {
-        axios.post("https://backend-j4jmtdb.herokuapp.com/logout")
+        axios.post("http://localhost:5000/logout")
         .then(response => {
             if (response.status === 200) {
                 console.log(response.data)
-                sessionStorage.clear('name', response.data.data.name)
-                sessionStorage.clear('email', response.data.data.email)
-                sessionStorage.clear('phone', response.data.data.phone)
+                sessionStorage.clear()
+
                 props.handleSuccessfulLogout();
                 props.history.push("/");
             }
