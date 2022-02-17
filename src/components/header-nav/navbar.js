@@ -8,7 +8,7 @@ import Logo from '../../../static/images/header and logo/Temp-Logo.png';
 
 const Navbar = props => {
     const handleSignOut = () => {
-        axios.post("http://localhost:5000/logout")
+        axios.post("https://backend-j4jmtdb.herokuapp.com/logout")
         .then(response => {
             if (response.status === 200) {
                 console.log(response.data)
@@ -38,12 +38,6 @@ const Navbar = props => {
                     <div className="nav-link-wrapper">
                         <NavLink exact to="/shop" activeClassName="nav-link-active">
                             Shop
-                        </NavLink>
-                    </div>
-
-                    <div className="nav-link-wrapper">
-                        <NavLink exact to="/events" activeClassName="nav-link-active">
-                            Events
                         </NavLink>
                     </div>
 
