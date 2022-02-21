@@ -1,4 +1,8 @@
-.shop-products {    
+.shop-products {
+    .msg {
+        margin: 40px 0px;
+        color: $dipdotblue;
+    }
     .shop-product{
         display: grid;
         grid-template-rows: 1/-1;

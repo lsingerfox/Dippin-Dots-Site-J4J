@@ -60,6 +60,7 @@ export default class ShopProduct extends Component {
         else {
             return (
                 <div className='shop-products'>
+                    <h1 className='msg'>Please Use Contact Form to Order</h1>
                     <div className="shop-product">
                         {this.renderItems()}
                     </div>
