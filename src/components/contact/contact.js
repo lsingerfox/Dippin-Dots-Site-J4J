@@ -16,8 +16,12 @@ export default class Contact extends Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleMessage = this.handleMessage.bind(this);
+        this.pageSuccess = this.pageSuccess.bind(this);
     }
 
+    pageSuccess() {
+        
+    }
 
     handleChange(event) {
         this.setState({
@@ -48,7 +52,7 @@ export default class Contact extends Component {
                 this.setState({
                     successMsg: "Thank you for your message! You should receive a response within 24 to 48 hours."
                 })
-                // this.state.handleContactSubmission(response.data.contact)
+                this.props.history.push("/contact-success")
             } else if (response.status == 401) {
                 this.setState({
                     errorMsg: "Please fill out all required fields"
@@ -118,8 +122,9 @@ export default class Contact extends Component {
                         
                         <div className='msg-submit-error'>{this.state.errorMsg}</div>
                         <div className='msg-submit-error'>{this.state.errorText}</div>
+                        <div className='msg-submit-success'>{this.state.successMsg}</div>
 
-                        <button className="btn" type="submit">
+                        <button className="btn" type="submit" onClick={this.handleMessage}>
                             Send Message
                         </button>
                     </div>

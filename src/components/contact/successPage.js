@@ -2,7 +2,21 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 export default class SuccessMsg extends Component {
- 
+    constructor(props) {
+        super(props)
+
+        this.contactPage = this.contactPage.bind(this);
+        this.homePage = this.homePage.bind(this);
+    }
+
+    contactPage() {
+        this.props.history.push("/contact-us")
+    }
+
+    homePage() {
+        this.props.history.push("/")
+    }
+
     render() {
         return (
             <div className='success-msg-wrapper'>
@@ -15,12 +29,12 @@ export default class SuccessMsg extends Component {
                         within 24 to 48 hours.
                     </h2>
                     <div className='two-columns'>
-                        <Link to="/" className='home-btn'>
+                        <button className='home-btn' onClick={this.homePage}>
                             Return to Homepage
-                        </Link>
-                        <Link to='/contact-us' className='contact-btn'>
+                        </button>
+                        <button className='contact-btn' onClick={this.contactPage}>
                             Submit New Message
-                        </Link>
+                        </button>
                     </div>
                 </div>
             </div>
