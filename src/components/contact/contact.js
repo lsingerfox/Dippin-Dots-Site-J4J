@@ -1,8 +1,6 @@
 import axios from 'axios';
 import React, { Component } from 'react';
 
-import Navbar from './header-nav/navbar';
-
 export default class Contact extends Component {
     constructor (props) {
         super (props);
@@ -20,32 +18,45 @@ export default class Contact extends Component {
         this.handleMessage = this.handleMessage.bind(this);
     }
 
+
     handleChange(event) {
         this.setState({
             [event.target.name]: event.target.value,
+            successMsg: "",
+            errorMsg: "",
             errorText: ""
         })
     }
 
+    // handleContactSubmission(msg) {
+    //     this.setState({
+    //         msgs: [msg].append(this.state.msgs)
+    //     })
+    // }
+
     handleMessage(event) {
-        axios.post("https://backend-j4jmtdb.herokuapp.com/contact", {
-            fullName: this.setState.fullName,
-            companyName: this.setState.companyName,
-            email: this.setState.email,
-            phone: this.setState.phone,
-            subject: this.setState.subject,
-            message: this.setState.message
+        axios.post("http://localhost:5000/contact", {
+            fullName: this.state.fullName,
+            companyName: this.state.companyName,
+            email: this.state.email,
+            phone: this.state.phone,
+            subject: this.state.subject,
+            message: this.state.message
         }) .then(response => {
             if (response.status == 200) {
                 console.log(response.data)
+                this.setState({
+                    successMsg: "Thank you for your message! You should receive a response within 24 to 48 hours."
+                })
+                // this.state.handleContactSubmission(response.data.contact)
             } else if (response.status == 401) {
                 this.setState({
-                    errorText: "Please fill out all required fields"
+                    errorMsg: "Please fill out all required fields"
                 });
-            } else {
-                null
-            }
+            } 
+
         }).catch(error => {
+            console.log(error)
             this.setState({
                 errorText: "An error has occurred"
             })
@@ -62,27 +73,31 @@ export default class Contact extends Component {
                     <div className="two-columns">
                         <input
                         type="text"
-                        name="name"
+                        name="fullName"
                         placeholder="* Full Name"
-                        value={this.state.fullName}
+                        value={this.setState.fullName}
+                        onChange={this.handleChange}
                         />
                         <input
                         type="text"
-                        name="company"
+                        name="companyName"
                         placeholder="  Company Name"
-                        value={this.state.companyName}
+                        value={this.setState.companyName}
+                        onChange={this.handleChange}
                         />
                         <input
                         type="email"
                         name="email"
                         placeholder="* Email"
-                        value={this.state.email}
+                        value={this.setState.email}
+                        onChange={this.handleChange}
                         />
                         <input
                         type="phone"
                         name="phone"
                         placeholder="* Phone Number"
-                        value={this.state.phone}
+                        value={this.setState.phone}
+                        onChange={this.handleChange}
                         />
                     </div>
                     <div className="one-column">
@@ -90,15 +105,20 @@ export default class Contact extends Component {
                         type = "subject"
                         name = "subject"
                         placeholder = "* Subject"
-                        value = {this.state.subject}
+                        value = {this.setState.subject}
+                        onChange={this.handleChange}
                         />
                         <textarea
                         rows="10"
                         name="message"
                         placeholder="How may we help you?"
-                        value={this.state.message}
+                        value={this.setState.message}
+                        onChange={this.handleChange}
                         />
                         
+                        <div className='msg-submit-error'>{this.state.errorMsg}</div>
+                        <div className='msg-submit-error'>{this.state.errorText}</div>
+
                         <button className="btn" type="submit">
                             Send Message
                         </button>

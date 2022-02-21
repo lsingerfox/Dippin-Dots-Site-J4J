@@ -9,8 +9,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Navbar from './header-nav/navbar';
 import Home from './home';
-import Contact from './contact';
+import Contact from './contact/contact';
 import About from './aboutComponents/about';
+import SuccessMsg from './contact/successPage';
 import ShopProduct from './shop/shop';
 import Auth from "./auth";
 import Dashboard from './auth/dashboard';
@@ -101,6 +102,7 @@ export default class App extends Component {
 
             <Route path="/shop" component={ShopProduct} />
             <Route path="/contact-us" component={Contact} />
+            <Route path="/contact-success" component={SuccessMsg} />
             <Route path="/about-us" component={About} />
 
             <Route path="/dashboard"

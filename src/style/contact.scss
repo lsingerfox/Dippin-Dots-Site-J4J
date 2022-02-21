@@ -49,6 +49,18 @@ h1 {
         padding-top: 7px;
     }
 
+    .msg-submit-error {
+        font-size: 2em;
+        font-weight: 400;
+        color: red;
+    }
+
+    .msg-submit-success {
+        font-size: 2em;
+        font-weight: 400;
+        color: green;
+    }
+
     .btn {
         margin-top: 25px;
         justify-self: start;
@@ -56,6 +68,8 @@ h1 {
         width: 150px;
         font-size: 1.5em;
         color: white;
+        text-decoration: none;
+        text-align: center;
         border: solid 1px transparent;
         border-radius: 10px;
         background-image: linear-gradient(to right, $j4j-pink, $dipdotblue);
