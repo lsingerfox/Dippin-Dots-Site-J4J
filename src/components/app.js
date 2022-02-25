@@ -15,6 +15,7 @@ import SuccessMsg from './contact/successPage';
 import ShopProduct from './shop/shop';
 import Auth from "./auth";
 import Dashboard from './auth/dashboard';
+import Messages from './contact/messages';
 import Icons from "./helpers/icons";
 
 export default class App extends Component {
@@ -104,6 +105,15 @@ export default class App extends Component {
             <Route path="/contact-us" component={Contact} />
             <Route path="/contact-success" component={SuccessMsg} />
             <Route path="/about-us" component={About} />
+            
+            <Route path="/messages"
+              render={props => (
+                <Messages
+                  {...props}
+                  loggedInStatus={this.state.loggedInStatus}
+                />
+              )}
+            />
 
             <Route path="/dashboard"
               render={props => (

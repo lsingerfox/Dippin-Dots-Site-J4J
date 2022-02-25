@@ -8,7 +8,8 @@ import {
     faSignOutAlt,
     faPaperPlane,
     faUsers,
-    faPortrait
+    faPortrait,
+    faTrash
 } from "@fortawesome/fontawesome-free-solid";
 
 const Icons = () => {
@@ -21,7 +22,8 @@ const Icons = () => {
         faSignOutAlt,
         faPaperPlane,
         faUsers,
-        faPortrait
+        faPortrait,
+        faTrash
     );
 };
 

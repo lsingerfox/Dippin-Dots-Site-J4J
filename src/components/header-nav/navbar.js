@@ -52,6 +52,11 @@ const Navbar = props => {
                         </NavLink>
                     </div>
                     <div className='nav-link-wrapper'>
+                        <NavLink exact to = "/messages" activeClassName='nav-link-active'>
+                            { props.loggedInStatus === "LOGGED_IN" ? "Messages" : null }
+                        </NavLink>
+                    </div>
+                    <div className='nav-link-wrapper'>
                         <NavLink exact to = "/dashboard" activeClassName='nav-link-active'>
                             { props.loggedInStatus === "LOGGED_IN" ? "Dashboard" : null }
                         </NavLink>

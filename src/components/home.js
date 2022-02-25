@@ -13,9 +13,6 @@ export default class Home extends Component {
                     <Link to exact="/shop" className="link-grid-icon">
                         <FontAwesomeIcon icon="store" />
                     </Link>
-                    <Link to exact="/events" className="link-grid-icon">
-                        <FontAwesomeIcon icon="calendar-alt" />
-                    </Link>
                     <Link to exact="/contact-us" className="link-grid-icon">
                         <FontAwesomeIcon icon="paper-plane" />
                     </Link>

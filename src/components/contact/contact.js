@@ -76,6 +76,7 @@ export default class Contact extends Component {
                 <form onSubmit={this.handleMessage}>
                     <div className="two-columns">
                         <input
+                        required
                         type="text"
                         name="fullName"
                         placeholder="* Full Name"
@@ -90,6 +91,7 @@ export default class Contact extends Component {
                         onChange={this.handleChange}
                         />
                         <input
+                        required
                         type="email"
                         name="email"
                         placeholder="* Email"
@@ -97,6 +99,7 @@ export default class Contact extends Component {
                         onChange={this.handleChange}
                         />
                         <input
+                        required
                         type="phone"
                         name="phone"
                         placeholder="* Phone Number"
@@ -106,6 +109,7 @@ export default class Contact extends Component {
                     </div>
                     <div className="one-column">
                         <input
+                        required
                         type = "subject"
                         name = "subject"
                         placeholder = "* Subject"
@@ -113,6 +117,7 @@ export default class Contact extends Component {
                         onChange={this.handleChange}
                         />
                         <textarea
+                        required
                         rows="10"
                         name="message"
                         placeholder="How may we help you?"
