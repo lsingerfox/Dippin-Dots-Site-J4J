@@ -32,14 +32,8 @@ export default class Contact extends Component {
         })
     }
 
-    // handleContactSubmission(msg) {
-    //     this.setState({
-    //         msgs: [msg].append(this.state.msgs)
-    //     })
-    // }
-
     handleMessage(event) {
-        axios.post("http://localhost:5000/contact", {
+        axios.post("https://backend-j4jmtdb.herokuapp.com/contact", {
             fullName: this.state.fullName,
             companyName: this.state.companyName,
             email: this.state.email,

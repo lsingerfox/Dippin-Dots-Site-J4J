@@ -1,35 +1,23 @@
 .msg-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    align-items: center;
     .msg-grid {
-        border: solid 2px grey;
-        margin: 10px;
-        width: 600px;
-        height: 450px;
-        .icon {
-            margin: 5px 5px 0px 0px;
-            text-align: right;
-            font-size: 2rem;
-            color: red;
-
-            :hover {
-                color: $j4j-pink;
-                transition: ease-in 0.3s;
-            }
-
-            :active {
-                color: $dipdotblue;
-            }
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        .message {
+            border: solid 2px grey;
+            margin: 10px;
+            width: 600px;
+            height: 450px;
         }
-        .two-columns {
-            display: grid;
+    }
+    .two-columns {
+        display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             font-size: 1.7rem;
         }
-
+        
         .one-column {
             display: grid;
             grid-template-columns: 1fr;
@@ -37,11 +25,34 @@
             .msg-subject, .msg-message {
                 font-size: 1.7rem;
             }
-
+            
             .one-column_message {
                 font-size: 1.5rem;
                 margin-bottom: 10px;
             }
         }
     }
+
+    .top-line {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 900;
+        margin-top: 15px;
+    }
+
+    .icon {
+        margin: 5px 5px 0px 0px;
+        text-align: center;
+        font-size: 5rem;
+        color: red;
+        margin-bottom: 20px;
+    
+        :hover {
+            color: $j4j-pink;
+            transition: ease-in 0.3s;
+        }
+    
+        :active {
+            color: $dipdotblue;
+        }
 }

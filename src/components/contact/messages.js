@@ -16,15 +16,16 @@ export default class Messages extends Component {
         this.handleDeleteClick = this.handleDeleteClick.bind(this)
     }
 
-    handleDeleteClick(message) {
-        axios.delete(`http://localhost:5000/message/${message.id}`, 
+    handleDeleteClick(messages) {
+        axios.delete(`http://localhost:5000/message/${messages.id}`, 
         ).then(response => {
-            console.log("Delete Successful", data.data)
             this.setState({
                 items: this.state.items.filter(item => {
                     return item.id !== message.id;
                 })
             });
+            
+            console.log("Delete Successful", data.data)
 
             return response.data
         }).catch(error =>{
@@ -33,7 +34,7 @@ export default class Messages extends Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:5000/messages")
+        fetch("https://backend-j4jmtdb.herokuapp.com/messages")
         .then(response => response.json())
         .then(data => {
             console.log(data.data)
@@ -52,10 +53,7 @@ export default class Messages extends Component {
 
     renderMessages() {
         const msgHtml = this.state.messages.map(message => (
-            <div className='msg-grid'>
-                <div className='icon' onClick={this.handleDeleteClick}>
-                    <FontAwesomeIcon icon="trash" />
-                </div>
+            <div className='message'>
                 <div className='two-columns' key={message.id}>
                     <h4>Name: {message.fullName}</h4>
                     <h4>Company: {message.companyName}</h4>
@@ -86,7 +84,15 @@ export default class Messages extends Component {
     else {
         return (
             <div className='msg-wrapper'>
-                {this.renderMessages()}
+                <div className='top-line'>
+                    Delete First Message
+                </div>
+                <div className='icon' onClick={this.handleDeleteClick}>
+                    <FontAwesomeIcon icon="trash" />
+                </div>
+                <div className='msg-grid'>
+                    {this.renderMessages()}
+                </div>
             </div>
         )
     }
