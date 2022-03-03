@@ -1,0 +1,21 @@
+.no-match-wrapper {
+    justify-items: center;
+    text-align: center;
+    margin-top: 30px;
+
+    .sorry {
+        font-size: 5rem;
+    }
+    .icon {
+        font-size: 8rem;
+        color: $dipdotblue;
+    }
+    .no-found {
+        font-size: 5rem;
+    }
+
+    img {
+        width: 652.5px;
+        height: 100%;
+    }
+}

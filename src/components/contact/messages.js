@@ -25,8 +25,8 @@ export default class Messages extends Component {
                 })
             });
             
-            console.log("Delete Successful", data.data)
-
+            console.log("Delete Successful", response.data)
+            
             return response.data
         }).catch(error =>{
             console.log("handleDeleteClick error", error);
@@ -89,6 +89,9 @@ export default class Messages extends Component {
                 </div>
                 <div className='icon' onClick={this.handleDeleteClick}>
                     <FontAwesomeIcon icon="trash" />
+                </div>
+                <div className='refresh-icon' onClick={() => window.location.reload()}>
+                    <FontAwesomeIcon icon="redo" />
                 </div>
                 <div className='msg-grid'>
                     {this.renderMessages()}

@@ -16,6 +16,7 @@ import ShopProduct from './shop/shop';
 import Auth from "./auth";
 import Dashboard from './auth/dashboard';
 import Messages from './contact/messages';
+import NoMatch from './noMatch';
 import Icons from "./helpers/icons";
 
 export default class App extends Component {
@@ -78,7 +79,8 @@ export default class App extends Component {
 
   authorizedRoutes () {
     return [
-      <Route key="dashboard" path="/dashboard" component={Dashboard} />
+      <Route key="dashboard" path="/dashboard" component={Dashboard} />,
+      <Route key="messages" path="/messages" component={Messages} />
     ]
   }
 
@@ -124,7 +126,7 @@ export default class App extends Component {
               )}
             />
 
-            {/* <Route component={NoMatch} /> */}
+            <Route path="/no-match" component={NoMatch} />
           </Switch>
         </div>
         </Router>

@@ -9,7 +9,9 @@ import {
     faPaperPlane,
     faUsers,
     faPortrait,
-    faTrash
+    faTrash,
+    faRedo,
+    faFrown
 } from "@fortawesome/fontawesome-free-solid";
 
 const Icons = () => {
@@ -23,7 +25,9 @@ const Icons = () => {
         faPaperPlane,
         faUsers,
         faPortrait,
-        faTrash
+        faTrash,
+        faRedo,
+        faFrown
     );
 };
 

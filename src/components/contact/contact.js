@@ -16,11 +16,6 @@ export default class Contact extends Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleMessage = this.handleMessage.bind(this);
-        this.pageSuccess = this.pageSuccess.bind(this);
-    }
-
-    pageSuccess() {
-        
     }
 
     handleChange(event) {
@@ -122,7 +117,7 @@ export default class Contact extends Component {
                         <div className='msg-submit-error'>{this.state.errorMsg}</div>
                         <div className='msg-submit-error'>{this.state.errorText}</div>
                         <div className='msg-submit-success'>{this.state.successMsg}</div>
-
+                        
                         <button className="btn" type="submit" onClick={this.handleMessage}>
                             Send Message
                         </button>
