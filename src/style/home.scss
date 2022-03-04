@@ -1,19 +1,27 @@
 .link-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     background-color: $dipdotblue;
     margin-top: -10px;
 
     .link-grid-icon {
         margin: 20px;
-        font-size: 500px;
+        font-size: 250px;
+        text-align: center;
+        text-decoration: none;
         color: $j4j-pink;
 
         :hover {
             color: $j4j-fade;
             transition: 0.3s;
+        }
+
+        .shop, .contact, .about {
+            display: flex;
+            text-align: center;
+            color: $j4j-pink;
+            font-size: 100px;
         }
 
     }
