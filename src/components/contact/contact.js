@@ -38,9 +38,6 @@ export default class Contact extends Component {
         }) .then(response => {
             if (response.status == 200) {
                 console.log(response.data)
-                this.setState({
-                    successMsg: "Thank you for your message! You should receive a response within 24 to 48 hours."
-                })
                 this.props.history.push("/contact-success")
             } else if (response.status == 401) {
                 this.setState({
@@ -65,7 +62,6 @@ export default class Contact extends Component {
                 <form onSubmit={this.handleMessage}>
                     <div className="two-columns">
                         <input
-                        required
                         type="text"
                         name="fullName"
                         placeholder="* Full Name"
@@ -80,7 +76,6 @@ export default class Contact extends Component {
                         onChange={this.handleChange}
                         />
                         <input
-                        required
                         type="email"
                         name="email"
                         placeholder="* Email"
@@ -88,7 +83,6 @@ export default class Contact extends Component {
                         onChange={this.handleChange}
                         />
                         <input
-                        required
                         type="phone"
                         name="phone"
                         placeholder="* Phone Number"
@@ -98,7 +92,6 @@ export default class Contact extends Component {
                     </div>
                     <div className="one-column">
                         <input
-                        required
                         type = "subject"
                         name = "subject"
                         placeholder = "* Subject"
@@ -106,7 +99,6 @@ export default class Contact extends Component {
                         onChange={this.handleChange}
                         />
                         <textarea
-                        required
                         rows="10"
                         name="message"
                         placeholder="How may we help you?"
@@ -116,7 +108,6 @@ export default class Contact extends Component {
                         
                         <div className='msg-submit-error'>{this.state.errorMsg}</div>
                         <div className='msg-submit-error'>{this.state.errorText}</div>
-                        <div className='msg-submit-success'>{this.state.successMsg}</div>
                         
                         <button className="btn" type="submit" onClick={this.handleMessage}>
                             Send Message
