@@ -1,7 +1,11 @@
 {
-  "name": "react-redux-router",
+  "name": "j4j-mt-dist-dippin-dots",
   "version": "1.0.0",
-  "description": "Basic skeleton codebase for React/Redux/Router applications.",
+  "description": "Website built for Jump 4 Joy Montana Distributing LLC.",
+  "engines": {
+    "node": "^14.16.4",
+    "npm": "^6.14.12"
+  },
   "scripts": {
     "preinstall": "npm set audit false",
     "start": "webpack-dev-server --config webpack/dev.config.js --watch",
