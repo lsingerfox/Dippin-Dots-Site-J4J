@@ -17,7 +17,7 @@ export default class Messages extends Component {
     }
 
     handleDeleteClick(messages) {
-        axios.delete(`http://localhost:5000/message/${messages.id}`, 
+        axios.delete(`https://backend-j4jmtdb.herokuapp.com/message/${messages.id}`, 
         ).then(response => {
             this.setState({
                 items: this.state.items.filter(item => {
