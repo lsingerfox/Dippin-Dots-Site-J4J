@@ -3,6 +3,12 @@
     justify-content: space-between;
     padding: 30px;
     background-color: $dipdotblue;
+    @media screen and (max-width: 600px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        text-align: center;
+    }
 
     .left-nav {
 
@@ -13,6 +19,13 @@
             &:hover {
                 transition: 0.5s ease-in-out;
                 filter: brightness(90%)
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            img {
+                width: 175px;
+                height: 175px;
             }
         }
 
@@ -44,6 +57,15 @@
                 color: $j4j-pink;
             }
         }
+
+        @media screen and (max-width: 600px) {
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+            margin-left: -50px;
+            margin-top: 25px;
+            font-size: 40px;
+        }
     }
 
     .right-nav {
@@ -58,6 +80,9 @@
                 font-size: 23px;
                 font-weight: 300;
             }
+        }
+        @media screen and (max-width: 600px) {
+            justify-content: center;
         }
     }
 }

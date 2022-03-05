@@ -2,6 +2,9 @@
     .msg {
         margin: 40px 0px;
         color: $dipdotblue;
+        @media screen and (max-width: 600px) {
+            text-align: center;
+        }
     }
     .shop-product{
         display: grid;
@@ -19,7 +22,9 @@
             width: 275px;
             margin-top: 20px;
         }
-    
+        @media screen and (max-width: 600px) {
+            grid-template-columns: 1fr;
+        }    
     }
 
     .shop-product_title{

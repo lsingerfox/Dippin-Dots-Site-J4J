@@ -3,6 +3,10 @@
     grid-template-columns: 1fr 1fr;
     height: calc(100vh - 84px);
 
+    @media screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+
     .left-column {
         background-size: cover;
     }

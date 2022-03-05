@@ -2,6 +2,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: calc(100vh - 84px);
+    @media screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
 
     .left-dashboard {
 
@@ -11,6 +14,10 @@
                 margin-top: 50px;
                 height: 500px;
                 width: 100%;
+
+                @media screen and (max-width: 600px) {
+                    height: 200px;
+                }
             }
         }
     }
@@ -31,6 +38,10 @@
 
         .name, .email, .phone {
             margin-top: 40px;
+        }
+        @media screen and (max-width: 600px) {
+            text-align: center;
+            font-size: 2em;
         }
     }
 }

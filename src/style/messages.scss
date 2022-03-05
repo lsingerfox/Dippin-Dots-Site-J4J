@@ -4,11 +4,17 @@
         grid-template-columns: 1fr 1fr 1fr;
         justify-items: center;
         align-items: center;
+        @media screen and (max-width: 600px) {
+            grid-template-columns: 1fr;
+        }
         .message {
             border: solid 2px grey;
             margin: 10px;
             width: 600px;
             height: 450px;
+            @media screen and (max-width: 600px) {
+                width: 450px;
+            }
         }
     }
     .two-columns {
@@ -16,6 +22,9 @@
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             font-size: 1.7rem;
+            @media screen and (max-width: 600px) {
+                grid-template-columns: 1fr;
+            }
         }
         
         .one-column {
