@@ -17,5 +17,8 @@
     img {
         width: 652.5px;
         height: 100%;
+        @media screen and (max-width: 600px) {
+            width: 452.5px;
+        }
     }
 }
